@@ -22,8 +22,8 @@ Movement, actions, etc. Gamepad support with `Gamepad` API (HTML5).
 Grid based, 2-dimensional array (nodes)
 
 ### Nodes
-- Planets (colonizable)
-- Asteroid fields (resource)
+- Planets (colonization)
+- Asteroid fields (resource gather)
 - Empty space
 
 ### Navigation
@@ -59,5 +59,11 @@ Looks like I'm going to have to learn a little bit about enemy AI... It might be
 ### Sound
 Sound effects for notifications, nearby resources or enemies (enable/disable?), different kinds of units
 
+### Music
+'In Search Of Solitude' by Scott Buckley - released under CC-BY 4.0. www.scottbuckley.com.au
+
 ### Narration
 Text to speech? Recording my own voice? Utilize screen reader (seems hardest)?
+
+### Saving
+`localStorage` for saving game state. Export as JSON?
