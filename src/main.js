@@ -23,21 +23,21 @@ function tick()
             <br>
             Right: ${input.right}
             <br>
-            Confirm: ${input.confirm}
+            Confirm: ${input.A}
             <br>
-            Cancel: ${input.cancel}
+            Cancel: ${input.B}
         `;
     }
     else
     {
         testP.innerHTML = "No Gamepad Detected...";
     }
+    game.players[game.currentPlayer].inspector.tick();
     window.requestAnimationFrame(tick);
 }
 
 function main()
 {
-
     // Game Controller Init
     game = Game.getInstance();
     game.addPlayer(new Human());
@@ -57,10 +57,11 @@ function main()
     // Debug Init
     testP = document.getElementById("testP");
     testP.innerHTML = map.testDrawGrid();
-    setCellValue(4, 18, "!");
+    //setCellValue(4, 18, "!");
 
-    // Begin Tick
-    //window.requestAnimationFrame(tick);
+    // Begin Game
+    game.begin();
+    window.requestAnimationFrame(tick);
 }
 
 main();

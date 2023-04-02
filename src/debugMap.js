@@ -10,5 +10,5 @@ function setCellValue(x, y, value)
         grid = document.getElementById('grid');
         tbody = grid.children.item(0);
     }
-    tbody.children.item(y - 1).children.item(x - 1).innerHTML = value;
+    tbody.children.item(y).children.item(x).innerHTML = value;
 }

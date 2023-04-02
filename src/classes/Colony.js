@@ -7,7 +7,13 @@ class Colony
      * How many points of damage this colony can take before destruction
      * @type {number}
      */
-    hitPoints = 0;
+    totalHitPoints = 0;
+
+    /**
+     * How many hit points this colony currently has
+     * @type {number}
+     */
+    currentHitPoints = 0;
 
     /**
      * The player this colony belongs to
@@ -41,7 +47,7 @@ class Colony
 
     /**
      * What unit type this colony is currently building (if any)
-     * @type {Unit|null}
+     * @type {null}
      */
     currentlyBuilding = null;
 
@@ -49,9 +55,9 @@ class Colony
      * Creates a new instance of a colony
      * @param player Player this colony belongs to
      * @param node Node this colony occupies
-     * @param hitPoints Colony hit points
+     * @param hitPoints Colony hit points, default 500
      */
-    constructor(player, node, hitPoints)
+    constructor(player, node, hitPoints = 500)
     {
         if (!player || !node || hitPoints <= 0)
         {
@@ -59,9 +65,13 @@ class Colony
         }
 
         this.player = player;
+        this.player.colonies.push(this);
         this.node = node;
         this.node.colony = this;
-        this.hitPoints = hitPoints;
+        this.totalHitPoints = hitPoints;
+        this.currentHitPoints = hitPoints;
+
+        // TODO: begin building a scout
     }
 
     /**
@@ -73,16 +83,51 @@ class Colony
 
         if (this.turnsToNextBuild <= 0)
         {
-            let newUnit = new this.currentlyBuilding()
+            // TODO Spawn built unit
+            /*
+            let newUnit = new ??
+            this.player.units.push(newUnit);
+            */
         }
     }
 
     /**
      * Begin building a unit type (refunds a portion of unfinished units)
-     * @param {Unit} unitType The type of unit class to build
+     * @param unitType The type of unit class to build
      */
     beginBuilding(unitType)
     {
-        this.currentlyBuilding = unitType
+        this.currentlyBuilding = unitType;
+        this.turnsToNextBuild = unitType.turnsToBuild;
+    }
+
+    /**
+     * Called by the attacker to damage this colony by the provided attack power
+     * @param {number} attackerPower Attacker attack power
+     */
+    damage(attackerPower)
+    {
+        if (attackerPower <= 0) return;
+
+        this.currentHitPoints -= attackerPower;
+        //TODO: Play sound
+
+        if (this.currentHitPoints <= 0)
+        {
+            this.destroy();
+        }
+    }
+
+    /**
+     * Call to destroy this colony
+     */
+    destroy()
+    {
+        if (this.node)
+        {
+            this.node.colony = null;
+        }
+        this.player.colonies.filter(colony => colony !== this);
+        //TODO: Play sound
     }
 }

@@ -25,7 +25,13 @@ class Unit
      * How many points of damage this unit can take before destruction
      * @type {number}
      */
-    hitPoints = 0;
+    totalHitPoints = 0;
+
+    /**
+     * How many hit points the unit currently has
+     * @type {number}
+     */
+    currentHitPoints = 0;
 
     /**
      * How many turns it takes to build this unit at a colony
@@ -63,7 +69,8 @@ class Unit
 
         this.movementRange = movementRange;
         this.scanRange = scanRange;
-        this.hitPoints = hitPoints;
+        this.totalHitPoints = hitPoints;
+        this.currentHitPoints = hitPoints;
         this.turnsToBuild = turnsToBuild;
         player.units.push(this);
     }
@@ -76,6 +83,10 @@ class Unit
     {
         if (!node) return;
 
+        if (this.node)
+        {
+            this.node.unit = null;
+        }
         this.node = node;
     }
 
@@ -102,19 +113,19 @@ class Unit
     {
         if (attackerPower <= 0) return;
 
-        this.hitPoints -= attackerPower;
+        this.currentHitPoints -= attackerPower;
         //TODO: Play sound
 
-        if (this.hitPoints <= 0)
+        if (this.currentHitPoints <= 0)
         {
-            this.#destroy();
+            this.destroy();
         }
     }
 
     /**
      * Call to destroy this unit
      */
-    #destroy()
+    destroy()
     {
         if (this.node)
         {

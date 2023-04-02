@@ -3,9 +3,30 @@
  */
 class Game
 {
+    /**
+     * Whether the current game is already in play
+     * @type {boolean}
+     */
     hasBegun = false;
+
+    /**
+     * What turn number the game is on
+     * @type {number}
+     */
     turn = 0;
+
+    /**
+     * An array of all players in the game
+     * @type {[Player]}
+     */
     players = [];
+
+    /**
+     * The index of the current player in the players array
+     * @type {number}
+     * @see players
+     */
+    currentPlayer = 0;
 
     /**
      * Singleton instance of the Game class
@@ -59,16 +80,58 @@ class Game
      * Adds a player to the game.
      * NOTE: Cannot be run if the game has already begun. Must be done before begin()
      * @see begin
+     * @param {Player} player New player to add
      */
-    addPlayer()
+    addPlayer(player)
     {
+        this.players.push(player);
     }
 
     /**
-     * Starts the game proper
+     * Starts the game proper (sets up player positions and starts player turns)
      */
     begin()
     {
+        // Create starting colony and ship for all players
+        let map = Map.getInstance();
+        let planets = [];
+        for (let nodeColumns of map.grid)
+        {
+            for (let node of nodeColumns)
+            {
+                if (node.type === Node.Type.PLANET)
+                {
+                    planets.push(node);
+                }
+            }
+        }
+
+        let rand = new Math.seedrandom("testSeed");
+        for (let player of this.players)
+        {
+            let choice = Math.floor(rand() * planets.length);
+            let node = planets[choice];
+            node.addColony(new Colony(player, node));
+            let scout = new Scout(player);
+            scout.move(node);
+            player.inspector.moveToNode(node);
+        }
+
+        // Begin player turns
+        this.hasBegun = true;
         this.players[0].startTurn();
+    }
+
+    /**
+     * Called to start the next player's turn
+     */
+    nextPlayerTurn()
+    {
+        this.currentPlayer ++;
+        if (this.currentPlayer > this.players.length)
+        {
+            this.currentPlayer = 0;
+        }
+        this.players[this.currentPlayer].startTurn();
     }
 }

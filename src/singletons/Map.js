@@ -157,9 +157,21 @@ class Map
 
         for (let i = 0; i < this.MAP_SIZE.HEIGHT; ++i)
         {
-            draw += "<tr>";
+            if (i === 0)
+            {
+                draw += "<tr><th> </th>";
+                for (let j = 0; j < this.MAP_SIZE.WIDTH; ++j)
+                {
+                    draw += "<th>" + j + "</th>";
+                }
+                draw += "</tr>"
+            }
             for (let j = 0; j < this.MAP_SIZE.WIDTH; ++j)
             {
+                if (j === 0)
+                {
+                    draw += "<th>" + i + "</th>";
+                }
                 let node = this.grid[i][j];
                 draw += "<td style='width: 15px; border: 1px solid black; text-align: center'>";
                 if (node.type === Node.Type.EMPTY)

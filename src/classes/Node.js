@@ -69,4 +69,23 @@ class Node
         }
         this.creditsPerTurn = creditsPerTurn;
     }
+
+    /**
+     * Add a colony to this node
+     * @param {Colony} colony Colony instance
+     * @param {Worker} workerShip Worker ship, if any (will be consumed)
+     */
+    addColony(colony, workerShip = null)
+    {
+        if (!colony)
+        {
+            throw new Error("Missing colony to add to node: " + this.x + ", " + this.y);
+        }
+
+        this.colony = colony;
+        if (workerShip)
+        {
+            workerShip.destroy();
+        }
+    }
 }

@@ -1,5 +1,12 @@
+/**
+ * Input Class: Input controller used for tracking state of keyboard/controller
+ */
 class Input
 {
+    /**
+     * Currently active gamepad (if exists)
+     * @type {null}
+     */
     gamepad = null;
 
     //TODO: Add mappings for control schemes
@@ -7,16 +14,44 @@ class Input
     down = false;
     left = false;
     right = false;
-    confirm = false;
-    cancel = false;
+    A = false;
+    B = false;
+    X = false;
+    Y = false;
 
     /**
-     * Initializes game input devices
+     * Singleton instance of the Input class
+     * @type {Input|null}
+     */
+    static #instance = null;
+
+    /**
+     * Constructor. Warns if instance is already created.
      */
     constructor()
     {
+        if (Input.#instance)
+        {
+            console.warn("Input instance already created");
+            return Input.#instance;
+        }
+
         window.addEventListener("gamepadconnected", this.#gamepadConnected.bind(this));
         window.addEventListener("gamepaddisconnected", this.#gamepadDisconnected.bind(this));
+    }
+
+    /**
+     * Creates (if necessary) and returns the singleton instance of the Input class
+     * @return {Input|null} Input singleton instance
+     */
+    static getInstance()
+    {
+        if (Input.#instance === null)
+        {
+            Input.#instance = new Input();
+        }
+
+        return Input.#instance;
     }
 
     /**
@@ -47,8 +82,10 @@ class Input
         this.down = this.gamepad?.buttons[13].pressed;
         this.left = this.gamepad?.buttons[14].pressed;
         this.right = this.gamepad?.buttons[15].pressed;
-        this.confirm = this.gamepad?.buttons[0].pressed;
-        this.cancel = this.gamepad?.buttons[1].pressed;
+        this.A = this.gamepad?.buttons[0].pressed;
+        this.B = this.gamepad?.buttons[1].pressed;
+        this.X = this.gamepad?.buttons[2].pressed;
+        this.Y = this.gamepad?.buttons[3].pressed;
     }
 
     /**
