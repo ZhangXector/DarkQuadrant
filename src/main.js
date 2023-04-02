@@ -1,5 +1,7 @@
-let input = null;
 let testP = null;
+let audio = null;
+let input = null;
+let map = null;
 
 function tick()
 {
@@ -34,10 +36,17 @@ function tick()
 
 function main()
 {
+    // Initialization
     testP = document.getElementById("testP");
+    audio = Audio.getInstance();
+    //audio.playMusic();
     input = new Input();
+    map = Map.getInstance();
+    map.generate("AccessibleGamesRock");
+    testP.innerHTML = map.testDrawGrid();
 
-    window.requestAnimationFrame(tick);
+    // Begin Tick
+    //window.requestAnimationFrame(tick);
 }
 
 main();
