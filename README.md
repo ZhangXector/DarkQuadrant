@@ -1,7 +1,26 @@
 # Dark Quadrant
-A blind-accessible web-based strategy game made for the [Games for Blind Gamers 2](https://itch.io/jam/games-for-blind-gamers-2) game jam.
+A blind-accessible web-based space strategy game made for the [Games for Blind Gamers 2](https://itch.io/jam/games-for-blind-gamers-2) game jam.
 
-# License
+Story
+-----
+You find yourself as leader of a space-faring civilization. You start with a scout ship, and a home
+colony on a planet. Explore your surroundings, capture resources, and battle for dominance in the
+**Dark Quadrant**.
+
+Music
+-----
+- 'Aurora' by Scott Buckley - released under CC-BY 4.0. https://www.scottbuckley.com.au
+- 'Machina' by Scott Buckley - released under CC-BY 4.0. https://www.scottbuckley.com.au
+- 'In Search Of Solitude' by Scott Buckley - released under CC-BY 4.0. https://www.scottbuckley.com.au
+- 'Elysium' by Alexander Nakarada - released under CC-BY 4.0. https://www.serpentsoundstudios.com
+- 'Space Ambience' by Alexander Nakarada - released under CC-BY 4.0. https://www.serpentsoundstudios.com
+
+Libraries
+---------
+- seedrandom.js (Version 3.0.5) Copyright &copy; 2019 David Bau - released under MIT License. https://github.com/davidbau/seedrandom
+
+License
+-------
 This work is licensed under Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International. To view a copy of this license, visit: [CC BY-NC-SA 4.0](http://creativecommons.org/licenses/by-nc-sa/4.0)
 
 <p xmlns:cc="http://creativecommons.org/ns#" >

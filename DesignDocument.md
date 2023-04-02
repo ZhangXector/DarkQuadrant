@@ -1,16 +1,10 @@
 Dark Quadrant Game Design Document
 ==================================
 
-Story
------
-You find yourself as leader of a space-faring civilization. You start with a scout ship, and a home
-colony on a planet. Explore your surroundings, capture resources, and battle for dominance in the
-**Dark Quadrant**.
-
 Systems
 -------
 
-### Input (Keyboard/Mouse)
+### Input (Keyboard/Gamepad)
 Movement, actions, etc. Gamepad support with `Gamepad` API (HTML5).
 
 - N S E W movement
@@ -112,18 +106,8 @@ It might be really simple to start with.
 ### Sound
 Sound effects for notifications, nearby resources or enemies (enable/disable?), different kinds of units?
 
-### Music
-- 'Aurora' by Scott Buckley - released under CC-BY 4.0. https://www.scottbuckley.com.au
-- 'Machina' by Scott Buckley - released under CC-BY 4.0. https://www.scottbuckley.com.au
-- 'In Search Of Solitude' by Scott Buckley - released under CC-BY 4.0. https://www.scottbuckley.com.au
-- 'Elysium' by Alexander Nakarada - released under CC-BY 4.0. https://www.serpentsoundstudios.com
-- 'Space Ambience' by Alexander Nakarada - released under CC-BY 4.0. https://www.serpentsoundstudios.com
-
 ### Narration
 Text to speech? Recording my own voice? Utilize screen reader (seems hardest)?
 
 ### Saving
 `localStorage` for saving game state. Export as JSON?
-
-### Libraries
-- seedrandom.js (Version 3.0.5) Copyright &copy; 2019 David Bau - released under MIT License. https://github.com/davidbau/seedrandom
