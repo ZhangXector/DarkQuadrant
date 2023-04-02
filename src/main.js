@@ -1,11 +1,12 @@
 let testP = null;
+let game = null;
 let audio = null;
 let input = null;
 let map = null;
 
 function tick()
 {
-    // TODO: Only needed for Chrome? Needs to be verified.
+    //TODO: Only needed for Chrome? Needs to be verified.
     //input.pollGamepads();
 
     input.getInput();
@@ -36,14 +37,27 @@ function tick()
 
 function main()
 {
-    // Initialization
-    testP = document.getElementById("testP");
+
+    // Game Controller Init
+    game = Game.getInstance();
+    game.addPlayer(new Human());
+    game.addPlayer(new AI());
+
+    // Audio Controller Init
     audio = Audio.getInstance();
     //audio.playMusic();
+
+    // Input Controller Init
     input = new Input();
+
+    // Map Controller Init
     map = Map.getInstance();
     map.generate("AccessibleGamesRock");
+
+    // Debug Init
+    testP = document.getElementById("testP");
     testP.innerHTML = map.testDrawGrid();
+    setCellValue(4, 18, "!");
 
     // Begin Tick
     //window.requestAnimationFrame(tick);

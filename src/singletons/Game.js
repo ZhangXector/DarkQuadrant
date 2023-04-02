@@ -3,8 +3,9 @@
  */
 class Game
 {
-    credits = 0;
-    turn = 1;
+    hasBegun = false;
+    turn = 0;
+    players = [];
 
     /**
      * Singleton instance of the Game class
@@ -52,5 +53,22 @@ class Game
     import()
     {
 
+    }
+
+    /**
+     * Adds a player to the game.
+     * NOTE: Cannot be run if the game has already begun. Must be done before begin()
+     * @see begin
+     */
+    addPlayer()
+    {
+    }
+
+    /**
+     * Starts the game proper
+     */
+    begin()
+    {
+        this.players[0].startTurn();
     }
 }

@@ -2,7 +2,7 @@ class Input
 {
     gamepad = null;
 
-    // TODO: Add mappings for control schemes
+    //TODO: Add mappings for control schemes
     up = false;
     down = false;
     left = false;

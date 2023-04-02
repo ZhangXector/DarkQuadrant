@@ -153,32 +153,37 @@ class Map
      */
     testDrawGrid()
     {
-        let draw = "";
+        let draw = "<table id='grid' style='border-collapse: collapse;'>";
 
         for (let i = 0; i < this.MAP_SIZE.HEIGHT; ++i)
         {
-            draw += "<br>";
+            draw += "<tr>";
             for (let j = 0; j < this.MAP_SIZE.WIDTH; ++j)
             {
                 let node = this.grid[i][j];
+                draw += "<td style='width: 15px; border: 1px solid black; text-align: center'>";
                 if (node.type === Node.Type.EMPTY)
                 {
-                    draw += ". ";
+                    draw += "-";
                 }
                 else if (node.type === Node.Type.PLANET)
                 {
-                    draw += "P ";
+                    draw += "P";
                 }
                 else if (node.type === Node.Type.ASTEROIDS)
                 {
-                    draw += "A ";
+                    draw += "A";
                 }
                 else
                 {
-                    draw += "? ";
+                    draw += "?";
                 }
+                draw += "</td>"
             }
+            draw += "</tr>"
         }
+
+        draw += "</table>";
 
         return draw;
     }
