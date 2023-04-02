@@ -33,34 +33,22 @@ class Node
     y = 0;
 
     /**
-     * Neighbor Node to the north
-     * @type {Node|null}
-     */
-    nodeNorth = null;
-
-    /**
-     * Neighbor Node to the south
-     * @type {Node|null}
-     */
-    nodeSouth = null;
-
-    /**
-     * Neighbor Node to the west
-     * @type {Node|null}
-     */
-    nodeWest = null;
-
-    /**
-     * Neighbor Node to the east
-     * @type {Node|null}
-     */
-    nodeEast = null;
-
-    /**
      * How many credits per turn this node provides if controlled
      * @type {number}
      */
     creditsPerTurn = 0;
+
+    /**
+     * Currently occupying unit (if any)
+     * @type {Unit|null}
+     */
+    unit = null;
+
+    /**
+     * Currently occupying colony (if any)
+     * @type {Colony|null}
+     */
+    colony = null;
 
     /**
      * Creates a new instance of Node class
