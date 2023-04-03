@@ -1,6 +1,6 @@
 class Inspector
 {
-    static INSPECT_TIME_DELAY = 3;
+    static INSPECT_TIME_DELAY = 2;
 
     /**
      * The current node the inspector is on
@@ -40,7 +40,7 @@ class Inspector
      */
     tick()
     {
-        if (this.input.Y && !this.currentlyInspecting)
+        if (this.input.inspect && !this.currentlyInspecting)
         {
             this.inspectNode();
             setTimeout(this.finishInspection.bind(this), Inspector.INSPECT_TIME_DELAY * 1000);

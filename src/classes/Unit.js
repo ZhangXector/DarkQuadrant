@@ -34,12 +34,6 @@ class Unit
     currentHitPoints = 0;
 
     /**
-     * How many turns it takes to build this unit at a colony
-     * @type {number}
-     */
-    turnsToBuild = 0;
-
-    /**
      * The player this unit belongs to
      * @type {Player|null}
      */
@@ -58,9 +52,8 @@ class Unit
      * @param movementRange Distance this unit can move during a turn
      * @param scanRange Scan range for inspecting nodes/units
      * @param hitPoints Unit hit points
-     * @param turnsToBuild Turns to build this unit
      */
-    constructor(player, movementRange, scanRange, hitPoints, turnsToBuild)
+    constructor(player, movementRange, scanRange, hitPoints)
     {
         if (this.constructor === Unit)
         {
@@ -71,7 +64,6 @@ class Unit
         this.scanRange = scanRange;
         this.totalHitPoints = hitPoints;
         this.currentHitPoints = hitPoints;
-        this.turnsToBuild = turnsToBuild;
         player.units.push(this);
     }
 

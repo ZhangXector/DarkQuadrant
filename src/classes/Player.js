@@ -46,9 +46,12 @@ class Player
         {
             throw new Error("Can't instantiate an abstract Player!");
         }
-
-        this.inspector = new Inspector();
     }
+
+    /**
+     * Called to update game logic on the player
+     */
+    tick() { }
 
     /**
      * Called to start this player's turn

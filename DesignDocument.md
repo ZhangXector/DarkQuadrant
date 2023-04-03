@@ -111,3 +111,4 @@ Text to speech? Recording my own voice? Utilize screen reader (seems hardest)?
 
 ### Saving
 `localStorage` for saving game state. Export as JSON?
+Autosave?

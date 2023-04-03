@@ -61,6 +61,14 @@ class Game
     }
 
     /**
+     * Used to save the game to the local storage
+     */
+    save()
+    {
+
+    }
+
+    /**
      * Used to export a game save file
      */
     export()
@@ -114,7 +122,10 @@ class Game
             node.addColony(new Colony(player, node));
             let scout = new Scout(player);
             scout.move(node);
-            player.inspector.moveToNode(node);
+            if (player instanceof Human)
+            {
+                player.inspector.moveToNode(node);
+            }
         }
 
         // Begin player turns

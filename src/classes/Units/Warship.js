@@ -14,7 +14,13 @@ class Warship extends Unit
      * @param hitPoints Unit hit points, default 200
      * @param attackPower Unit attack power, default 20
      */
-    constructor(player, movementRange = 2, scanRange = 3, hitPoints = 200, attackPower = 20)
+    constructor(
+        player,
+        movementRange = 2,
+        scanRange = 3,
+        hitPoints = 200,
+        attackPower = 20
+    )
     {
         super(player, movementRange, scanRange, hitPoints);
 

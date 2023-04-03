@@ -12,7 +12,6 @@ class Scout extends Unit
      * @param movementRange Distance this unit can move during a turn, default 4
      * @param scanRange Scan range for inspecting nodes/units, default 4
      * @param hitPoints Unit hit points, default 100
-     * @param turnsToBuild How many turns to build this unit, default 3
      * @param attackPower Unit attack power, default 10
      */
     constructor(
@@ -20,7 +19,6 @@ class Scout extends Unit
         movementRange = 4,
         scanRange = 4,
         hitPoints = 100,
-        turnsToBuild = 0,
         attackPower = 10
     )
     {
