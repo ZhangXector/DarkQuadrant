@@ -25,6 +25,8 @@ Libraries
 
 License
 -------
+&copy; 2023 by Cliff Kelley (GitHub username: ZhangXector).
+
 This work is licensed under Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International. To view a copy of this license, visit: [CC BY-NC-SA 4.0](http://creativecommons.org/licenses/by-nc-sa/4.0)
 
 <p xmlns:cc="http://creativecommons.org/ns#" >
