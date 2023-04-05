@@ -29,9 +29,9 @@ License
 
 This work is licensed under Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International. To view a copy of this license, visit: [CC BY-NC-SA 4.0](http://creativecommons.org/licenses/by-nc-sa/4.0)
 
-<p xmlns:cc="http://creativecommons.org/ns#" >
+<p xmlns:cc="https://creativecommons.org/ns#" >
     <a 
-        href="http://creativecommons.org/licenses/by-nc-sa/4.0/?ref=chooser-v1"
+        href="https://creativecommons.org/licenses/by-nc-sa/4.0/?ref=chooser-v1"
         target="_blank"
         rel="license noopener noreferrer"
         style="display:inline-block;">

@@ -23,7 +23,7 @@ Grid based, 2-dimensional array (nodes)
 - Empty space
 
 ### Player
-#### Navigation
+#### Inspector
 Free-movement around the map to inspect nodes and surroundings
 
 Fog of war?
@@ -91,8 +91,12 @@ NOTE: Notify steps will only be needed for player, not AI
 - Check for win condition:
   - If all other players except for the current player (AI included) have a colony count of 0, current player wins!
 
+### Tutorial
+Movement, inspector, building, scanning, gathering resources
+Maybe some basic objectives, or a separate game mode? (Tutorial vs. New Game?)
+
 ### Enemies
-One or more other colonies can compete for the **Dark Quadrant**
+One or more other species can compete for the **Dark Quadrant**
 
 #### Enemy AI
 Looks like I'm going to have to learn a little bit about enemy AI...
@@ -102,13 +106,23 @@ It might be really simple to start with.
 - Main menu
 - Colony menu (build)
 - Unit action menu
+- Readouts for area scans
 
 ### Sound
 Sound effects for notifications, nearby resources or enemies (enable/disable?), different kinds of units?
+Ambient noises for aspects of the game/menus
+Pingable sonar-style local area map
 
 ### Narration
-Text to speech? Recording my own voice? Utilize screen reader (seems hardest)?
+Text to speech? Prerecorded voiceover? Utilize screen reader (seems hardest, but most accessible?)
+Windows/Chrome screen reader support
 
 ### Saving
 `localStorage` for saving game state. Export as JSON?
-Autosave?
+Auto save?
+
+### Additional Resources for Accessibility
+http://web.archive.org/web/20120417131242/http://www.blindcomputergames.com/guidelines/guidelines.html
+https://gameaccessibilityguidelines.com/full-list/
+https://www.24a11y.com/2019/game-accessibility-and-the-web/
+https://www.w3.org/WAI/ARIA/apg/patterns/
