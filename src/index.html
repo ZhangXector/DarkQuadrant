@@ -3,8 +3,8 @@
     <head>
         <meta charset="UTF-8">
         <title>Dark Quadrant</title>
-        <link rel="stylesheet" href="index.css">
         <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="index.css">
     </head>
     <body>
         <h1 id="mainTitle">Dark Quadrant</h1>
@@ -17,7 +17,7 @@
         <audio preload="none" class="musicFile" src="../assets/music/Elysium+-+320bit.mp3"></audio>
         <audio preload="none" class="musicFile" src="../assets/music/Space+Ambience+-+320bit.mp3"></audio>
 
-        <!-- UI -->
+        <!-- Debug UI -->
         <p id="testP"></p>
 
         <!-- Scripts -->
@@ -40,5 +40,29 @@
         <script src="singletons/Map.js"></script>
         <script src="debugMap.js"></script>
         <script src="main.js"></script>
+
+        <!-- Main Menu -->
+        <ul id="mainMenu">
+            <li>
+                <a href="#" id="newGameLink">
+                    New Game
+                </a>
+            </li>
+            <li>
+                <a href="#" id="loadGameLink">
+                    Load Game
+                </a>
+            </li>
+            <li>
+                <a href="#" id="tutorialLink">
+                    Tutorial
+                </a>
+            </li>
+            <li>
+                <a href="#" id="optionsLink">
+                    Options
+                </a>
+            </li>
+        </ul>
     </body>
 </html>
