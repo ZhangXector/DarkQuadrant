@@ -1,5 +1,5 @@
 # Dark Quadrant
-A blind-accessible web-based space strategy game made for the [Games for Blind Gamers 2](https://itch.io/jam/games-for-blind-gamers-2) game jam.
+A blind-accessible web-based space strategy game started for the [Games for Blind Gamers 2](https://itch.io/jam/games-for-blind-gamers-2) game jam (though not completed in time).
 
 Story
 -----
