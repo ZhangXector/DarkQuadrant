@@ -36,6 +36,7 @@ class Game
 
     /**
      * Constructor. Warns if instance is already created.
+     * @returns {Game}
      */
     constructor()
     {

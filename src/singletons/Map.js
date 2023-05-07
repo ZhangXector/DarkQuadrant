@@ -48,6 +48,10 @@ class Map
      */
     static #instance = null;
 
+    /**
+     * Constructor. Warns if instance is already created.
+     * @returns {Map}
+     */
     constructor()
     {
         if (Map.#instance)

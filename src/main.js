@@ -1,5 +1,6 @@
 let body = null;
 let testP = null;
+let announcer = null;
 let game = null;
 let audio = null;
 let input = null;
@@ -27,6 +28,12 @@ function init()
 
 function main()
 {
+    document.body.onresize = ThemisGamesTemplate.scaleGameContainer;
+
+    // Announcer Controller Init
+    announcer = Announcer.getInstance();
+    announcer.announce("This is a test.");
+
     // Game Controller Init
     game = Game.getInstance();
     game.addPlayer(new Human());
@@ -65,6 +72,7 @@ function main()
     //setCellValue(4, 18, "!");
 
     // Begin Game
+    ThemisGamesTemplate.scaleGameContainer();
     game.begin();
     window.requestAnimationFrame(tick);
 }

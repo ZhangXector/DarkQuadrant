@@ -39,6 +39,7 @@ class Audio
 
     /**
      * Constructor. Warns if instance is already created.
+     * @returns {Audio}
      */
     constructor()
     {

@@ -7,62 +7,70 @@
         <link rel="stylesheet" href="index.css">
     </head>
     <body>
-        <h1 id="mainTitle">Dark Quadrant</h1>
-        <div id="backgroundImage"></div>
+        <div id="positioningWrapper">
+            <div id="gameContainer" role="application">
+                <h1 id="mainTitle">Dark Quadrant</h1>
+                <div id="backgroundImage"></div>
 
-        <!-- Audio Files -->
-        <audio preload="none" class="musicFile" src="../assets/music/sb_aurora.mp3"></audio>
-        <audio preload="none" class="musicFile" src="../assets/music/Machina.mp3"></audio>
-        <audio preload="none" class="musicFile" src="../assets/music/sb_insearchofsolitude.mp3"></audio>
-        <audio preload="none" class="musicFile" src="../assets/music/Elysium+-+320bit.mp3"></audio>
-        <audio preload="none" class="musicFile" src="../assets/music/Space+Ambience+-+320bit.mp3"></audio>
+                <!-- Audio Files -->
+                <audio preload="none" class="musicFile" src="../assets/music/sb_aurora.mp3"></audio>
+                <audio preload="none" class="musicFile" src="../assets/music/Machina.mp3"></audio>
+                <audio preload="none" class="musicFile" src="../assets/music/sb_insearchofsolitude.mp3"></audio>
+                <audio preload="none" class="musicFile" src="../assets/music/Elysium+-+320bit.mp3"></audio>
+                <audio preload="none" class="musicFile" src="../assets/music/Space+Ambience+-+320bit.mp3"></audio>
 
-        <!-- Debug UI -->
-        <p id="testP"></p>
+                <!-- Debug UI -->
+                <p id="testP"></p>
 
-        <!-- Scripts -->
-        <script src="//cdnjs.cloudflare.com/ajax/libs/seedrandom/3.0.5/seedrandom.min.js"></script>
-        <script src="classes/Utilities.js"></script>
-        <script src="classes/Inspector.js"></script>
-        <script src="classes/Player.js"></script>
-        <script src="classes/Players/Human.js"></script>
-        <script src="classes/Players/AI.js"></script>
-        <script src="classes/Unit.js"></script>
-        <script src="classes/Units/Scout.js"></script>
-        <script src="classes/Units/Warship.js"></script>
-        <script src="classes/Units/Worker.js"></script>
-        <script src="classes/Colony.js"></script>
-        <script src="singletons/Game.js"></script>
-        <script src="classes/Sound.js"></script>
-        <script src="singletons/Audio.js"></script>
-        <script src="singletons/Input.js"></script>
-        <script src="classes/Node.js"></script>
-        <script src="singletons/Map.js"></script>
-        <script src="debugMap.js"></script>
-        <script src="main.js"></script>
+                <!-- Scripts -->
+                <script src="//cdnjs.cloudflare.com/ajax/libs/seedrandom/3.0.5/seedrandom.min.js"></script>
+                <script src="utilities/ThemisGamesTemplate.js"></script>
+                <script src="singletons/Announcer.js"></script>
+                <script src="utilities/Utilities.js"></script>
+                <script src="classes/Inspector.js"></script>
+                <script src="classes/Player.js"></script>
+                <script src="classes/Players/Human.js"></script>
+                <script src="classes/Players/AI.js"></script>
+                <script src="classes/Unit.js"></script>
+                <script src="classes/Units/Scout.js"></script>
+                <script src="classes/Units/Warship.js"></script>
+                <script src="classes/Units/Worker.js"></script>
+                <script src="classes/Colony.js"></script>
+                <script src="singletons/Game.js"></script>
+                <script src="classes/Sound.js"></script>
+                <script src="singletons/Audio.js"></script>
+                <script src="singletons/Input.js"></script>
+                <script src="classes/Node.js"></script>
+                <script src="singletons/Map.js"></script>
+                <script src="debugMap.js"></script>
+                <script src="main.js"></script>
 
-        <!-- Main Menu -->
-        <ul id="mainMenu">
-            <li>
-                <a href="#" id="newGameLink">
-                    New Game
-                </a>
-            </li>
-            <li>
-                <a href="#" id="loadGameLink">
-                    Load Game
-                </a>
-            </li>
-            <li>
-                <a href="#" id="tutorialLink">
-                    Tutorial
-                </a>
-            </li>
-            <li>
-                <a href="#" id="optionsLink">
-                    Options
-                </a>
-            </li>
-        </ul>
+                <!-- Main Menu -->
+                <ul id="mainMenu">
+                    <li>
+                        <a href="#" id="newGameLink">
+                            New Game
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" id="loadGameLink">
+                            Load Game
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" id="tutorialLink">
+                            Tutorial
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" id="optionsLink">
+                            Options
+                        </a>
+                    </li>
+                </ul>
+            </div> <!-- gameContainer -->
+        </div> <!-- positioningWrapper -->
+        <!-- Modals go here -->
+        <div id="screenReaderOnly" aria-live="polite" role="text" tabindex="0" aria-label=""></div>
     </body>
 </html>

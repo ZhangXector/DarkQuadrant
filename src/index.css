@@ -1,14 +1,83 @@
-body
+*
 {
-    padding: 20px;
+    /*Reset anything that would throw off our layout math*/
+    margin: 0; padding: 0;
+    box-sizing: border-box;
+    flex-shrink: 0;
+    font-size: 35px;
+}
+
+body, html
+{
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    /*Center the #positioningWrapper*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
     color: white;
-    background: transparent;
+    background-color: black;
+}
+
+:focus
+{
+    outline: solid 5px red;
+    border-radius: 3px;
+    z-index: 100000;
+}
+
+#positioningWrapper
+{
+    width: 0;
+    height: 0;
+    position: absolute;
+}
+
+#gameContainer
+{
+    position: relative;
+    transform-origin: center;
+    width: 1920px;
+    /*The authored height of all of our enclosed elements*/
+    height: 1080px;
+    /*Half of authored sizing. Centers #gameContainer onto #positioningWrapper*/
+    left: -960px;
+    top: -540px;
+    /*Javascript sets the scaling*/
+    transform: scale(0);
+}
+
+#screenReaderOnly
+{
+    /*"Hide" the announcer element*/
+    position: fixed;
+    height: 1px;
+    width: 1px;
+    overflow: hidden;
+    opacity: 0;
+    user-select: none;
+    z-index: -1000;
+}
+
+.hidden
+{
+    /*Hides modals until we need them*/
+    display: none !important;
+}
+
+.modal
+{
+    height: 400px;
+    width: 400px;
+    border: 1px solid black;
+    z-index: 100;
 }
 
 #mainTitle
 {
     color: white;
-    margin-top: 100px;
+    padding-top: 100px;
     font-size: 500%;
     text-align: center;
     text-shadow: 0 0 20px blue,
