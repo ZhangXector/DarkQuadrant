@@ -22,8 +22,9 @@ Images
 Libraries
 ---------
 - seedrandom.js (Version 3.0.5) Copyright &copy; 2019 David Bau - released under MIT License. https://github.com/davidbau/seedrandom
+- Themis Games Template - Blind-Accesible HTML + Javascript Game Template by nightblade9. https://github.com/nightblade9/themis-games-template
 
-License
+[License](LICENSE.txt)
 -------
 &copy; 2023 by Cliff Kelley (GitHub username: ZhangXector).
 
