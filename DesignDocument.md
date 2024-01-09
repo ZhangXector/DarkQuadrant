@@ -1,6 +1,11 @@
 Dark Quadrant Game Design Document
 ==================================
 
+Next Step
+---------
+
+Determine main game elements (gameContainer) element layout and modal window layout
+
 Systems
 -------
 
@@ -121,8 +126,18 @@ Windows/Chrome screen reader support
 `localStorage` for saving game state. Export as JSON?
 Auto save?
 
+### Music
+#### Additional music possibilities
+Saving these in case I need more music later on:
+- https://soundcloud.com/royaltyfreebackgroundmusic/sets/creative-commons-music-303?si=0746b380224c4221bde58d8909373f6c
+- https://soundcloud.com/royaltyfreebackgroundmusic/sets/creative-commons-music-311?si=248307d2b26c4fe296ef6fc8a47b3e58
+- https://soundcloud.com/royaltyfreebackgroundmusic/sets/creative-commons-music-312?si=1044ffc6c73c44eebc94012c70a50136
+- https://www.scottbuckley.com.au/library/in-search-of-solitude/#comments
+- https://freemusicarchive.org/music/kirk-osamayo/season-one/ambient-love/
+- https://www.serpentsoundstudios.com/royalty-free-music/ambient
+
 ### Additional Resources for Accessibility
-http://web.archive.org/web/20120417131242/http://www.blindcomputergames.com/guidelines/guidelines.html
-https://gameaccessibilityguidelines.com/full-list/
-https://www.24a11y.com/2019/game-accessibility-and-the-web/
-https://www.w3.org/WAI/ARIA/apg/patterns/
+- http://web.archive.org/web/20120417131242/http://www.blindcomputergames.com/guidelines/guidelines.html
+- https://gameaccessibilityguidelines.com/full-list/
+- https://www.24a11y.com/2019/game-accessibility-and-the-web/
+- https://www.w3.org/WAI/ARIA/apg/patterns/
